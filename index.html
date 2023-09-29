@@ -30,20 +30,8 @@
 
     <div class="list-box">
       <ul>
-        <li>
-          <span class="task-done">Fare delle cose</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>Fare delle cose</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>Fare delle cose</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>Fare delle cose</span>
+        <li v-for="task in tasks">
+          <span class="">{{task.cosaDaFare}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
