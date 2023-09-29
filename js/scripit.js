@@ -27,6 +27,7 @@ createApp({
   methods:{
     addNewTask(){
       console.log(this.newTask);
+      this.tasks.unshift(this.newTask);
     }
   },
   mounted(){
