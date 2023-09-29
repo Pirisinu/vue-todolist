@@ -31,3 +31,18 @@
   border-radius: 10px;
   padding: 5px 15px;
 }
+.list-box{
+  background-color: #F5F7F7;
+}
+.list-box ul{
+  list-style: none;
+  padding: 15px;
+}
+.list-box li{
+  line-height: 40px;
+  border-bottom: 1px solid lightgray;
+}
+.list-box li i{
+  float: right;
+  line-height: 40px;
+}
