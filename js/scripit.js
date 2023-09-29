@@ -20,12 +20,14 @@ createApp({
           cosaDaFare: 'Fare un viaggio',
           isDone: false
         }
-
-      ]
+      ],
+      newTask: ''
     }
   },
   methods:{
-
+    addNewTask(){
+      console.log(this.newTask);
+    }
   },
   mounted(){
     console.log('ciao da Vue');

@@ -24,8 +24,8 @@
     </div>
 
     <div class="add-task">
-      <input type="text" placeholder="New Task">
-      <button>Aggiungi</button>
+      <input v-model="newTask" type="text" placeholder="New Task">
+      <button @click="addNewTask">Aggiungi</button>
     </div>
 
     <div class="list-box">
