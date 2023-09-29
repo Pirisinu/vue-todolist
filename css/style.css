@@ -41,8 +41,17 @@
 .list-box li{
   line-height: 40px;
   border-bottom: 1px solid lightgray;
+  padding: 0px 10px;
 }
 .list-box li i{
   float: right;
   line-height: 40px;
+}
+.list-box li:hover{
+  background-color: white;
+  border-radius: 10px;
+}
+.list-box li i:hover{
+  color: red;
+  scale: 1.2;
 }
