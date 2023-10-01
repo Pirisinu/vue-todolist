@@ -24,12 +24,18 @@
     </div>
 
     <div class="add-task">
+
       <input  
       v-model="newTask"
       @keyup.enter="addNewTask" 
       type="text" 
       placeholder="New Task">
+
       <button @click="addNewTask">Aggiungi</button>
+
+      <p class="error-message" v-if="newTask.length < 5">
+        Devi inserire almeno 5 caratteri
+      </p>
     </div>
 
     <div class="list-box">
