@@ -27,16 +27,17 @@
 
       <input  
       v-model="newTask"
+      @input="clearError"
       @keyup.enter="addNewTask" 
       type="text" 
       placeholder="New Task">
 
-      <button @click="addNewTask">Aggiungi</button>
+      <button @click="addNewTask">Aggiungi</button> <br>
 
-      <p class="error-message" v-if="newTask.length < 5">
-        Devi inserire almeno 5 caratteri
-      </p>
     </div>
+    <p class="error-message" v-if="showError">
+      Devi inserire almeno 5 caratteri
+    </p>
 
     <div class="list-box">
       <ul>

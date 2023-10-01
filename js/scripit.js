@@ -21,19 +21,25 @@ createApp({
           isDone: false
         }
       ],
-      newTask: ''
+      newTask: '',
+      showError: false
     }
   },
   methods:{
     addNewTask(){
-      console.log(this.newTask);
-      this.tasks.unshift(
-        {
+      if (this.newTask.length < 5){
+        this.showError = true;
+        return;
+      };
+      this.tasks.unshift({
           cosaDaFare: this.newTask,
           isDone: false
-        }
-      );
-      console.log(this.tasks);
+      });
+      this.newTask= '';
+      this.showError = false;
+    },
+    clearError() {
+      this.showError = false; // Nascondi il messaggio di errore durante la digitazione
     },
     toggleDone(index) {
       this.tasks[index].isDone = !this.tasks[index].isDone;
