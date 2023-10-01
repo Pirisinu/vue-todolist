@@ -27,8 +27,20 @@ createApp({
   methods:{
     addNewTask(){
       console.log(this.newTask);
-      this.tasks.unshift(this.newTask);
-    }
+      this.tasks.unshift(
+        {
+          cosaDaFare: this.newTask,
+          isDone: false
+        }
+      );
+      console.log(this.tasks);
+    },
+    toggleDone(index) {
+      this.tasks[index].isDone = !this.tasks[index].isDone;
+    },
+    removeTask(index) {
+    this.tasks.splice(index, 1);
+  }
   },
   mounted(){
     console.log('ciao da Vue');

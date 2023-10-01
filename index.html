@@ -24,15 +24,19 @@
     </div>
 
     <div class="add-task">
-      <input v-model="newTask" type="text" placeholder="New Task">
+      <input  
+      v-model="newTask"
+      @keyup.enter="addNewTask" 
+      type="text" 
+      placeholder="New Task">
       <button @click="addNewTask">Aggiungi</button>
     </div>
 
     <div class="list-box">
       <ul>
-        <li v-for="task in tasks">
-          <span class="">{{task.cosaDaFare}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+        <li v-for="(task, index) in tasks">
+          <span @click="toggleDone(index)" :class="{ 'task-done': task.isDone }">{{task.cosaDaFare}}</span>
+          <i v-if="task.isDone" class="fa-solid fa-trash-can" @click="removeTask(index)"></i>
         </li>
       </ul>
     </div>
