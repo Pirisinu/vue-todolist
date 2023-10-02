@@ -39,7 +39,7 @@ createApp({
       this.showError = false;
     },
     clearError() {
-      this.showError = false; // Nascondi il messaggio di errore durante la digitazione
+      this.showError = false;
     },
     toggleDone(index) {
       this.tasks[index].isDone = !this.tasks[index].isDone;

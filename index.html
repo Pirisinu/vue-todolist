@@ -41,9 +41,9 @@
 
     <div class="list-box">
       <ul>
-        <li v-for="(task, index) in tasks">
-          <span @click="toggleDone(index)" :class="{ 'task-done': task.isDone }">{{task.cosaDaFare}}</span>
-          <i v-if="task.isDone" class="fa-solid fa-trash-can" @click="removeTask(index)"></i>
+        <li @click="toggleDone(index)" v-for="(task, index) in tasks">
+          <span :class="{ 'task-done': task.isDone }">{{task.cosaDaFare}}</span>
+          <i v-if="task.isDone" class="fa-solid fa-trash-can" @click.stop="removeTask(index)"></i>
         </li>
       </ul>
     </div>
